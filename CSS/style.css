@@ -1,0 +1,419 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/font/fontello.eot?15715261');
+    src: url('../font/font/fontello.eot?15715261#iefix') format('embedded-opentype'),
+    url('../font/font/fontello.woff2?15715261') format('woff2'),
+    url('../font/font/fontello.woff?15715261') format('woff'),
+    url('../font/font/fontello.ttf?15715261') format('truetype'),
+    url('../font/font/fontello.svg?15715261#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?15715261#fontello') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-road:before { content: '\e800'; } /* '' */
+.icon-chart-bar:before { content: '\e801'; } /* '' */
+.icon-picture:before { content: '\e802'; } /* '' */
+.icon-desktop:before { content: '\f108'; } /* '' */
+.icon-shopping-bag:before { content: '\f290'; } /* '' */
+.icon-telegram:before { content: '\f2c6'; } /* '' */
+/*ШРИФТОВЫЕ ИКОНКИ*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*HEADER*/
+header{
+    position: absolute;
+    width: 100%;
+    top: 20px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 36px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.menu__item{
+    display: inline-block;
+}
+.menu__item:not(:last-child){
+    margin-right: 20px;
+}
+.menu__item a{
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+.menu__item a:before{
+    content: '';
+    background: aqua;
+    height: 2px;
+    position: absolute;
+    bottom: -3px;
+    transition: .5s;
+    width: 100%;
+    transform: scale(0);
+}
+.menu__item a:hover:before{
+    transform: scale(1);
+}
+
+/*HERO*/
+#hero{
+    background: rgba(0,0,0,.2) url("../Image/Fuji.jpg") no-repeat bottom center/cover;
+    background-blend-mode: darken;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.hero-content__title{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+.hero-content__description{
+    margin-bottom: 20px;
+}
+.hero-content__button{
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #fff;
+}
+.hero-content__button:hover{
+    background: white;
+    color: #000;
+    border: 2px solid #000;
+    transition: all 0.5s;
+}
+
+/*SECTION ABOUT*/
+#about{
+    padding: 80px 0;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.col-6{
+    width: 50%;
+    margin-top: 30px;
+}
+.about__title{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.about__description{
+    display: inline-block;
+    color: gray;
+    margin-bottom: 20px;
+}
+.icon-box{
+    margin-bottom: 20px;
+    position: relative;
+}
+.icon{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #42da9a;
+    margin-right: 20px;
+    position: relative;
+    display: inline-block;
+}
+.icon .icon-shopping-bag{
+    color: #42da9a;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 7px;
+}
+.icon .icon-picture{
+    color: #42da9a;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 12px;
+    left: 6px;
+}
+.icon .icon-chart-bar{
+    color: #42da9a;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 12px;
+    left: 6px;
+}
+.icon-box__title{
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+.icon-box__description{
+    color: gray;
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+}
+.col-6 img{
+    width: 100%;
+    height: 100%;
+}
+
+/*SECTION FACTS*/
+#facts{
+    padding: 80px 0;
+    background: #f7f7f7;
+}
+.facts-title{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.facts-description{
+    color: grey;
+    text-align: center;
+}
+.facts-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 90px;
+}
+.facts-box-item{
+    flex-direction: column;
+}
+.facts-box-item-title{
+    color: yellowgreen;
+    font-size: 60px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+.facts-box-item-description{
+    display: flex;
+    justify-content: center;
+}
+
+/*SECTION SERVICES*/
+.serv-box{
+    margin: 80px 0;
+}
+.box-serv-title{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.box-serv-description{
+    text-align: center;
+    color: grey;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-4{
+    width: 33.3333%;
+    padding: 0 10px;
+}
+.box{
+    background: #FAFAFA;
+    border: 1px solid #e6e6e6;
+    padding: 50px 20px;
+    text-align: center;
+    height: 200px;
+    margin: 30px auto;
+    position: relative;
+
+}
+.serv-title{
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #000;
+}
+.serv-description{
+    font-size: 14px;
+    color: grey;
+}
+.icon-serv{
+    width: 55px;
+    height: 55px;
+    background: #2BC997;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.icon-desktop, .icon-chart-bar, .icon-telegram, .icon-picture,.icon-road, .icon-shopping-bag{
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    position: absolute;
+}
+.icon-desktop{left: 6px; top: 14px;}
+.icon-chart-bar{left: 7px; top: 13px;}
+.icon-telegram{left: 8px; top: 13px;}
+.icon-picture{left: 7px; top: 13px;}
+.icon-road{left: 7px; top: 12px;}
+.icon-shopping-bag{left: 8px; top: 12px;}
+
+/*SECTION PORTFOLIO*/
+#portfolio{
+    padding: 80px 0;
+}
+.portfolio-title-box{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.portfolio-description-box{
+    text-align: center;
+    color: grey;
+    margin-bottom: 40px;
+}
+.col-3{
+    width: 25%;
+    padding: 0 15px;
+}
+.portfolio-item{
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+}
+.portfolio-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.portfolio-item img:hover{
+    transform: translateY(-10px);
+    transition: .5s;
+}
+.portfolio-item:hover .overlay{
+    bottom: 0;
+}
+.overlay{
+    position: absolute;
+    bottom: -51px;
+    background: rgba(31, 213, 255, .5);
+    width: 100%;
+    height: 50px;
+    transition: all .5s;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+
+
+
+
+.tabs{
+    margin: 200px 0;
+}
+.tabs input[type='radio']{
+    display: none;
+}
+.tabs input:checked + label{
+    color: red;
+}
+.tab{
+    display: none;
+}
+#tab1:checked ~ .tab1,
+#tab2:checked ~ .tab2,
+#tab3:checked ~ .tab3,
+#tab4:checked ~ .tab4{
+    display: block;
+}
+
+
+
+
+
